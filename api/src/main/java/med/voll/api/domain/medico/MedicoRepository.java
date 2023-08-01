@@ -17,7 +17,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             and    m.especialidade = :especialidade
             and    m.id not in(
                         select c.medico.id 
-                        from   Consulta c
+                        from   Consultas c
                         where  c.data = :data
             )
             order by rand()
@@ -28,7 +28,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
     @Query("""
             select m.ativo
             from   Medico m
-            where  m.id = :id
+            where  m.id = :idMedico
             """)
     Boolean findAtivoById(Long idMedico);
 }

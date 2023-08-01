@@ -11,12 +11,12 @@ import med.voll.api.domain.pacientes.Paciente;
 import java.time.LocalDateTime;
 
 @Table(name = "consultas")
-@Entity(name = "Consulta")
+@Entity(name = "Consultas")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Consulta {
+public class Consultas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class Consulta {
 
     private LocalDateTime data;
 
-    @Column(name = "motivo_cancelamento")
+    @Column(name = "motivoCancelamento")
     @Enumerated(EnumType.STRING)
     private MotivoCancelamento motivoCancelamento;
 
