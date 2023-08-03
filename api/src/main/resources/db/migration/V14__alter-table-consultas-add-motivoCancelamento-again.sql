@@ -1,1 +1,0 @@
-ALTER TABLE consultas CHANGE motivoCancelamento motivo_cancelamento VARCHAR(100);
